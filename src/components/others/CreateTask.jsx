@@ -11,6 +11,13 @@ const CreateTask = () => {
 
     const submitHandler = (e) => {
         e.preventDefault()
+        
+        setTaskTitle('')
+        setTaskDate('')
+        setAsignTo('')
+        setPriority('')
+        setCategory('')
+        setTaskDescription('')
     }
 
     return (
