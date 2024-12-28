@@ -1,10 +1,18 @@
-import React, { useContext } from 'react'
+import React, { useContext , useEffect} from 'react'
 import { AuthContext } from '../../context/AuthProvider'
 
 const AllTask = () => {
 
-    const authData = useContext(AuthContext)
-    console.log(authData)
+    const [userData, setUserData] = useContext(AuthContext)
+
+    // useEffect(() => {
+    //      console.log(userData.employee)
+    // }, [userData])
+    
+    // const authData = localStorage.getItem('employees')
+    // console.log(authData)
+    // console.log(userData.employee[0].taskNumber.newTask)
+   
 
     return (
         <div id='tasklist_scroll' className='bg-[#1c1c1c] p-5 mt-5 rounded'>
@@ -18,7 +26,7 @@ const AllTask = () => {
 
             <div>
             {
-                authData.employee.map((elem, idx) => {
+                userData.employee.map((elem, idx) => {
                     return <div className="border-2 border-emerald-500 mb-2 py-2 px-4 flex justify-between rounded" key={idx}>
                         <h2 className='text-lg font-medium w-1/5'>{elem.name}</h2>
                         <h3 className='text-lg font-medium w-1/5 text-blue-400'>{elem.taskNumber.newTask}</h3>
