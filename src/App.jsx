@@ -30,9 +30,9 @@ const App = () => {
       setLoggedInUserData((prev) => ({ ...prev, ...userData.data }))
       
       
-      console.log(userData.data)
+      // console.log(userData.data)
 
-      console.log(loggedInUserData)
+      // console.log(loggedInUserData)
     }
   }, [])
 

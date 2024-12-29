@@ -31,8 +31,8 @@ const AllTask = () => {
                         <h2 className='text-lg font-medium w-1/5'>{elem.name}</h2>
                         <h3 className='text-lg font-medium w-1/5 text-blue-400'>{elem.taskNumber.newTask}</h3>
                         <h5 className='text-lg font-medium w-1/5 text-yellow-400'>{elem.taskNumber.active}</h5>
-                        <h5 className='text-lg font-medium w-1/5 text-white'>{elem.taskNumber.completed}</h5>
-                        <h5 className='text-lg font-medium w-1/5 text-green-400'>{elem.taskNumber.failed}</h5>
+                        <h5 className='text-lg font-medium w-1/5 text-green-400'>{elem.taskNumber.completed}</h5>
+                        <h5 className='text-lg font-medium w-1/5 text-red-400'>{elem.taskNumber.failed}</h5>
                     </div>
                 })
             }

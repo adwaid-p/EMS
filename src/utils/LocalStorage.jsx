@@ -10,10 +10,11 @@ const employees = [
         description: "Create the quarterly financial report.",
         date: "2024-12-30",
         category: "Finance",
-        active: true, // Only this is true
+        active: true,
         newTask: false,
         completed: false,
-        failed: false
+        failed: false,
+        assignTo: "Aarav Sharma"
       },
       {
         title: "Team meeting",
@@ -22,8 +23,9 @@ const employees = [
         category: "Management",
         active: false,
         newTask: false,
-        completed: true, // Only this is true
-        failed: false
+        completed: true,
+        failed: false,
+        assignTo: "Aarav Sharma"
       },
       {
         title: "Update database",
@@ -31,9 +33,10 @@ const employees = [
         date: "2024-12-29",
         category: "IT",
         active: false,
-        newTask: true, // Only this is true
+        newTask: true,
         completed: false,
-        failed: false
+        failed: false,
+        assignTo: "Aarav Sharma"
       }
     ],
     taskNumber: { active: 1, newTask: 1, completed: 1, failed: 0 }
@@ -51,18 +54,20 @@ const employees = [
         category: "Marketing",
         active: false,
         newTask: false,
-        completed: true, // Only this is true
-        failed: false
+        completed: true,
+        failed: false,
+        assignTo: "Ishita Verma"
       },
       {
         title: "Inventory check",
         description: "Conduct a full inventory check in the warehouse.",
         date: "2024-12-29",
         category: "Operations",
-        active: true, // Only this is true
+        active: true,
         newTask: false,
         completed: false,
-        failed: false
+        failed: false,
+        assignTo: "Ishita Verma"
       }
     ],
     taskNumber: { active: 1, newTask: 0, completed: 1, failed: 0 }
@@ -78,10 +83,11 @@ const employees = [
         description: "Analyze customer feedback from the past quarter.",
         date: "2024-12-31",
         category: "Customer Service",
-        active: true, // Only this is true
+        active: true,
         newTask: false,
         completed: false,
-        failed: false
+        failed: false,
+        assignTo: "Kabir Gupta"
       }
     ],
     taskNumber: { active: 1, newTask: 0, completed: 0, failed: 0 }
@@ -99,18 +105,20 @@ const employees = [
         category: "IT",
         active: false,
         newTask: false,
-        completed: true, // Only this is true
-        failed: false
+        completed: true,
+        failed: false,
+        assignTo: "Anaya Rao"
       },
       {
         title: "Server maintenance",
         description: "Perform scheduled maintenance on company servers.",
         date: "2024-12-29",
         category: "IT",
-        active: true, // Only this is true
+        active: true,
         newTask: false,
         completed: false,
-        failed: false
+        failed: false,
+        assignTo: "Anaya Rao"
       },
       {
         title: "Document API endpoints",
@@ -118,9 +126,10 @@ const employees = [
         date: "2024-12-30",
         category: "Documentation",
         active: false,
-        newTask: true, // Only this is true
+        newTask: true,
         completed: false,
-        failed: false
+        failed: false,
+        assignTo: "Anaya Rao"
       }
     ],
     taskNumber: { active: 1, newTask: 1, completed: 1, failed: 0 }
@@ -137,19 +146,21 @@ const employees = [
         date: "2024-12-28",
         category: "HR",
         active: false,
-        newTask: true, // Only this is true
+        newTask: true,
         completed: false,
-        failed: false
+        failed: false,
+        assignTo: "Rohan Patel"
       },
       {
         title: "Budget analysis",
         description: "Analyze and report on the department's monthly budget.",
         date: "2024-12-31",
         category: "Finance",
-        active: true, // Only this is true
+        active: true,
         newTask: false,
         completed: false,
-        failed: false
+        failed: false,
+        assignTo: "Rohan Patel"
       },
       {
         title: "Policy update",
@@ -158,13 +169,15 @@ const employees = [
         category: "Management",
         active: false,
         newTask: false,
-        completed: true, // Only this is true
-        failed: false
+        completed: true,
+        failed: false,
+        assignTo: "Rohan Patel"
       }
     ],
     taskNumber: { active: 1, newTask: 1, completed: 1, failed: 0 }
   }
 ];
+
 
 const admin = {
   id: 1,
