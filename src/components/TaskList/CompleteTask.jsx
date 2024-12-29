@@ -12,7 +12,7 @@ const CompleteTask = ({ data }) => {
                 {data.description}
             </p>
             <div className="mt-4">
-                <button className='w-full bg-green-600'>Complete</button>
+                {/* <button className='w-full bg-green-600'>Complete</button> */}
             </div>
         </div>
     )

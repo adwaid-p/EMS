@@ -10,7 +10,7 @@ const NewTask = ({ data }) => {
         
         // Update the employee's task list
         const updatedData = storedData.map(employee => {
-            if (employee.name === data.asignTo) {
+            if (employee.name === data.assignTo) {
                 const updatedTasks = employee.tasks.map(task => {
                     if (task.title === data.title) {
                         return {
@@ -34,7 +34,18 @@ const NewTask = ({ data }) => {
             }
             return employee; // Return the employee unchanged if not matched
         });
+        const loggegUserData = JSON.parse(localStorage.getItem('LoggedInUser'))
 
+        // console.log(loggegUserData.data)
+        // console.log(updatedData)
+
+        updatedData.map((data)=>{
+            if(data.email == loggegUserData.data.email && data.password == loggegUserData.data.password){
+                console.log(data)
+                // localStorage.setItem()
+                localStorage.setItem('LoggedInUser', JSON.stringify({ role: 'user', data: data }))
+            }
+        })
         // Save the updated data back to localStorage
         localStorage.setItem('employees', JSON.stringify(updatedData));
         

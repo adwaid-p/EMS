@@ -7,7 +7,7 @@ const CreateTask = () => {
 
     const [taskTitle, setTaskTitle] = useState('');
     const [taskDate, setTaskDate] = useState('');
-    const [asignTo, setAsignTo] = useState('');
+    const [assignTo, setAssignTo] = useState('');
     const [priority, setPriority] = useState('');
     const [category, setCategory] = useState('');
     const [taskDescription, setTaskDescription] = useState('');
@@ -21,7 +21,7 @@ const CreateTask = () => {
             description: taskDescription,
             date: taskDate,
             category,
-            asignTo,
+            assignTo,
             active: false,
             newTask: true,
             failed: false,
@@ -33,7 +33,7 @@ const CreateTask = () => {
 
         // Update the employee's task list
         const updatedData = data.map((employee) => {
-            if (employee.name === asignTo) {
+            if (employee.name === assignTo) {
                 return {
                     ...employee,
                     taskNumber: {
@@ -58,7 +58,7 @@ const CreateTask = () => {
         // Reset the form fields
         // setTaskTitle('');
         // setTaskDate('');
-        // setAsignTo('');
+        // sets('');
         // setPriority('');
         // setCategory('');
         // setTaskDescription('');
@@ -93,8 +93,8 @@ const CreateTask = () => {
                     <div>
                         <h3 className="text-sm text-gray-300 mb-0.5">Asign to</h3>
                         <input
-                            value={asignTo}
-                            onChange={(e) => setAsignTo(e.target.value)}
+                            value={assignTo}
+                            onChange={(e) => setAssignTo(e.target.value)}
                             className="text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border-[1px] border-gray-400 mb-4"
                             type="text"
                             placeholder="employee name"

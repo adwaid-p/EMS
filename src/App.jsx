@@ -36,13 +36,14 @@ const App = () => {
     }
   }, [])
 
-
+  const adminData = JSON.parse(localStorage.getItem('admin'))
+  // console.log(adminData.email)
 
   const handleLogin = (email, password) => {
     // console.log(data)
-    if (email == 'admin@gmail.com' && password == 123) {
+    if (email == adminData.email && password == adminData.password) {
       setUser('admin')
-      localStorage.setItem('LoggedInUser', JSON.stringify({ role: 'admin' }))
+      localStorage.setItem('LoggedInUser', JSON.stringify({ role: 'admin' , data: adminData}))
     } else if (userData) {
       const employee = userData.employee.find((emp) => emp.email == email && emp.password == password)
       if (employee) {
