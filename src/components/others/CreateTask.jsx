@@ -56,12 +56,13 @@ const CreateTask = () => {
         // console.log(updatedData);
 
         // Reset the form fields
-        // setTaskTitle('');
-        // setTaskDate('');
+        setTaskTitle('');
+        setTaskDate('');
+        setAssignTo('');
         // sets('');
         // setPriority('');
-        // setCategory('');
-        // setTaskDescription('');
+        setCategory('');
+        setTaskDescription('');
     };
 
     return (
